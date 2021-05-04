@@ -1,0 +1,130 @@
+.App {
+  margin-top: 20px;
+  text-align: center;
+  border-radius: 10px;
+  padding-bottom: 32px;
+  max-width: 700px;
+  border: 2px solid hsl(192, 67%, 15%);
+  outline: none;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: whitesmoke;
+}
+
+.Mess {
+  margin-top: 10px;
+  border-radius: 4px 4px 4px 4px;
+  border: 2px solid hsl(192, 67%, 15%);
+  text-align: center;
+}
+
+.ButtonAdd {
+  padding: 16px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  background-color: hsl(192, 67%, 15%);
+  color: #fff;
+  text-transform: capitalize;
+  width: 160px;
+}
+
+.InputAdd {
+  margin-top: 20px;
+  padding: 14px 0px 14px 16px;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid hsl(192, 67%, 15%);
+  outline: none;
+  width: 500px;
+  background: transparent;
+  margin-bottom: 5px;
+}
+
+.Error {
+  border-radius: 4px 4px 4px 4px;
+  max-width: 680px;
+  position: relative;
+  padding: 0.25rem;
+  margin-top: 1rem;
+  background-color: hsl(0, 66%, 53%);
+  color: rgb(255, 255, 255);
+  padding: 5px;
+}
+
+.Message {
+  margin-top: 20px;
+  max-width: 680px;
+  position: relative;
+  padding: 0.25rem;
+  margin-top: 1rem;
+  background-color: hsl(192, 67%, 15%);
+  color: rgb(255, 255, 255);
+}
+
+.Todo {
+  display: flex;
+  justify-content: space-between;
+
+  border-radius: 4px 4px 4px 4px;
+  max-width: 680px;
+  position: relative;
+  padding: 0.25rem;
+  margin-top: 1rem;
+  background-color: hsl(192, 67%, 15%);
+  color: white;
+  padding: 10px;
+}
+
+.TodoList {
+  max-width: 680px;
+  margin: auto;
+}
+
+.TodoCpl {
+  display: flex;
+  justify-content: space-between;
+
+  border-radius: 4px 4px 4px 4px;
+  max-width: 680px;
+  position: relative;
+  padding: 0.25rem;
+  margin-top: 1rem;
+  background-color: hsl(192, 67%, 15%);
+  color: white;
+  text-decoration: line-through;
+  opacity: 0.4;
+  padding: 10px;
+}
+
+.ButtonTodo {
+  margin-right: 5px;
+  color: #fff;
+}
+
+.EditButton {
+  padding: 16px;
+  border: 2px solid hsl(0, 0%, 100%);
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(192, 67%, 15%);
+  text-transform: capitalize;
+  width: 160px;
+  height: 60px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.EditInput {
+  padding: 14px 0px 14px 16px;
+  border: 2px solid hsl(0, 0%, 100%);
+  color: white;
+  outline: none;
+  width: 500px;
+  height: 28px;
+  background: transparent;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}

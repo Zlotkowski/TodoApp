@@ -1,5 +1,6 @@
 .App {
   margin-top: 20px;
+  margin-bottom: 20px;
   text-align: center;
   border-radius: 10px;
   padding-bottom: 32px;
@@ -9,6 +10,10 @@
   margin-left: auto;
   margin-right: auto;
   background-color: whitesmoke;
+
+  -webkit-box-shadow: 0px 10px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
 }
 
 .Mess {
@@ -16,6 +21,10 @@
   border-radius: 4px 4px 4px 4px;
   border: 2px solid hsl(192, 67%, 15%);
   text-align: center;
+
+  -webkit-box-shadow: 0px 10px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
 }
 
 .ButtonAdd {
@@ -28,6 +37,27 @@
   color: #fff;
   text-transform: capitalize;
   width: 160px;
+
+  -webkit-box-shadow: 0px 10px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+.ButtonLogin {
+  margin-top: 20px;
+  padding: 16px;
+  border: none;
+  border-radius: 4px 4px 4px 4px;
+  cursor: pointer;
+  outline: none;
+  background-color: hsl(192, 67%, 15%);
+  color: #fff;
+  text-transform: capitalize;
+  width: 160px;
+
+  -webkit-box-shadow: 0px 10px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
 }
 
 .InputAdd {
@@ -39,6 +69,25 @@
   width: 500px;
   background: transparent;
   margin-bottom: 5px;
+
+  -webkit-box-shadow: 0px 10px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+.InputLogin {
+  margin-top: 20px;
+  padding: 14px 0px 14px 16px;
+  border-radius: 4px 4px 4px 4px;
+  border: 2px solid hsl(192, 67%, 15%);
+  outline: none;
+  width: 500px;
+  background: transparent;
+  margin-bottom: 5px;
+
+  -webkit-box-shadow: 0px 10px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
 }
 
 .Error {
@@ -50,6 +99,10 @@
   background-color: hsl(0, 66%, 53%);
   color: rgb(255, 255, 255);
   padding: 5px;
+
+  -webkit-box-shadow: 0px 10px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
 }
 
 .Message {
@@ -60,6 +113,10 @@
   margin-top: 1rem;
   background-color: hsl(192, 67%, 15%);
   color: rgb(255, 255, 255);
+
+  -webkit-box-shadow: 0px 10px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
 }
 
 .Todo {
@@ -74,6 +131,10 @@
   background-color: hsl(192, 67%, 15%);
   color: white;
   padding: 10px;
+
+  -webkit-box-shadow: 0px 10px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
 }
 
 .TodoList {
@@ -95,6 +156,10 @@
   text-decoration: line-through;
   opacity: 0.4;
   padding: 10px;
+
+  -webkit-box-shadow: 0px 10px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
 }
 
 .ButtonTodo {
@@ -115,6 +180,10 @@
   height: 60px;
   margin-bottom: 5px;
   margin-top: 5px;
+
+  -webkit-box-shadow: 0px 10px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
 }
 
 .EditInput {
@@ -127,4 +196,8 @@
   background: transparent;
   margin-bottom: 5px;
   margin-top: 5px;
+
+  -webkit-box-shadow: 0px 10px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
 }

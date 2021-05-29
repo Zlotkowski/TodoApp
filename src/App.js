@@ -1,13 +1,35 @@
-import React from "react";
 import "./App.css";
-import TaskList from "./containers/TaskList";
+import Button from "./components/Button";
+import { Redirect, useHistory } from "react-router-dom";
+import DataProvider from "./hooks/DataContext";
+import TodoForm from "./containers/TodoForm";
+import TodoList from "./containers/TodoList";
 
-function App() {
+export default function App({ authorized }) {
+  const history = useHistory();
+
+  if (!authorized) {
+    return (
+      <>
+        <Redirect to="/login" />
+      </>
+    );
+  }
   return (
     <div className="App">
-      <TaskList />
+      <Button
+        className="ButtonLogin"
+        title="Wyloguj"
+        onClickButton={() => {
+          history.push("/login");
+        }}
+      />
+      <div>
+        <DataProvider>
+          <TodoForm />
+          <TodoList />
+        </DataProvider>
+      </div>
     </div>
   );
 }
-
-export default App;

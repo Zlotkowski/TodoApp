@@ -1,34 +1,33 @@
 import "./App.css";
+import React from "react";
 import Button from "./components/Button";
-import { Redirect, useHistory } from "react-router-dom";
-import DataProvider from "./hooks/DataContext";
 import TodoForm from "./containers/TodoForm";
 import TodoList from "./containers/TodoList";
+import Login from "./containers/Login";
+import useToken from "./hooks/useToken";
 
-export default function App({ authorized }) {
-  const history = useHistory();
+export default function App() {
+  const { token, setToken } = useToken();
 
-  if (!authorized) {
-    return (
-      <>
-        <Redirect to="/login" />
-      </>
-    );
+  const handleLogout = () => {
+    setToken("");
+    sessionStorage.clear();
+  };
+
+  if (!token) {
+    return <Login setToken={setToken} />;
   }
+
   return (
     <div className="App">
       <Button
         className="ButtonLogin"
         title="Wyloguj"
-        onClickButton={() => {
-          history.push("/login");
-        }}
+        onClickButton={handleLogout}
       />
       <div>
-        <DataProvider>
-          <TodoForm />
-          <TodoList />
-        </DataProvider>
+        <TodoForm />
+        <TodoList />
       </div>
     </div>
   );

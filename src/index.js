@@ -3,18 +3,19 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import Login from "./containers/Login";
+import EditTodo from "./containers/EditTodo";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import DataProvider from "./hooks/DataContext";
 
 function Wrapper() {
   return (
     <>
       <Switch>
-        <Route path="/login">
-          <Login />
-        </Route>
         <Route path="/todo">
-          <App authorized={true} />
+          <App />
+        </Route>
+        <Route path="/edit/:id">
+          <EditTodo />
         </Route>
       </Switch>
     </>
@@ -24,7 +25,9 @@ function Wrapper() {
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Wrapper />
+      <DataProvider>
+        <Wrapper />
+      </DataProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")

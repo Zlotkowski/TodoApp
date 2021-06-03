@@ -1,10 +1,21 @@
-import React from "react";
-import { useHistory } from "react-router-dom";
+import React, { useState } from "react";
+import PropTypes from "prop-types";
 import Button from "../components/Button";
-import Input from "../components/Input";
+import loginUser from "../hooks/loginToken";
 
-export default function Login() {
-  const history = useHistory();
+export default function Login({ setToken }) {
+  const [username, setUserName] = useState();
+  const [password, setPassword] = useState();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const token = await loginUser({
+      username,
+      password,
+    });
+    setToken(token);
+  };
+
   return (
     <div className="App">
       <h3>Najcenniejsze, co możesz zdobyć, to zdolność do:</h3>
@@ -14,16 +25,28 @@ export default function Login() {
         <p>-bez względu na to, czy ci się to podoba czy nie</p>
       </h4>
       <h5>Thomas Huxley</h5>
-      <Input className="InputLogin" title="Nazwa użytkownika" />
-      <Input className="InputLogin" title="Hasło użytkownika" />
+      <input
+        placeholder="Login"
+        className="InputLogin"
+        type="text"
+        onChange={(e) => setUserName(e.target.value)}
+      />
+      <input
+        placeholder="Hasło"
+        className="InputLogin"
+        type="password"
+        onChange={(e) => setPassword(e.target.value)}
+      />
       <p></p>
       <Button
         className="ButtonLogin"
         title="Potwierdź"
-        onClickButton={() => {
-          history.push("/todo");
-        }}
+        onClickButton={handleSubmit}
       />
     </div>
   );
 }
+
+Login.propTypes = {
+  setToken: PropTypes.func.isRequired,
+};

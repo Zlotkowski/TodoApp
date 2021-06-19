@@ -7,9 +7,19 @@ export default function TodoList() {
 
   return todos.length ? (
     <div className="TodoList">
-      {todos.map((todo) => {
-        return <TodoDetails todo={todo} key={todo.id} />;
-      })}
+      <h2>Do zrobienia jeszcze...</h2>
+      {todos
+        .filter((todo) => todo.isComplete === false)
+        .map((todo) => {
+          return <TodoDetails todo={todo} key={todo.id} />;
+        })}
+      <h2>O tych zadaniach możesz zapomnieć :)</h2>
+
+      {todos
+        .filter((todo) => todo.isComplete === true)
+        .map((todo) => {
+          return <TodoDetails todo={todo} key={todo.id} />;
+        })}
     </div>
   ) : (
     <div>No todos to read. Hello free time</div>

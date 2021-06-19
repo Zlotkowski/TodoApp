@@ -22,7 +22,7 @@ export default function TodoDetails({ todo }) {
 
         <AiOutlineEdit
           onClick={() => {
-            history.push(`/edit/${todo.id}`); //zamienić na Todo link
+            history.push(`/edit/${todo.id}`); //Todo link
           }}
         />
 

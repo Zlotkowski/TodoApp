@@ -3,12 +3,20 @@ export const ACTIONS = {
   DEL_TODO: "delete_todo",
   CMPL_TODO: "complate_todo",
   UPDATE_TODO: "update_todo",
+  JOIN_EXTERNAL_DATA: "join_external_data",
 };
 
 export default function DataReducer(state, action) {
   switch (action.type) {
+    case ACTIONS.JOIN_EXTERNAL_DATA: {
+      if (state.length === 0) {
+        return [...(state = action.fetchedData)];
+      } else {
+        return [...state];
+      }
+    }
+
     case ACTIONS.ADD_TODO:
-      console.log(action);
       return [
         ...state,
         {
@@ -17,6 +25,7 @@ export default function DataReducer(state, action) {
           isComplete: false,
         },
       ];
+
     case ACTIONS.DEL_TODO:
       return state.filter((todo) => todo.id !== action.id);
 
@@ -26,7 +35,6 @@ export default function DataReducer(state, action) {
       );
 
     case ACTIONS.UPDATE_TODO:
-      console.log(action);
       return state.map((todo) =>
         todo.id === action.id
           ? { ...todo, text: action.todo.editingTitle }
